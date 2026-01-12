@@ -1,0 +1,69 @@
+# NL2TK 环境变量配置
+# 使用方法：复制此文件为 .env，然后替换下面的值为你的实际配置
+
+# ============================================
+# 数据库配置
+# ============================================
+DATABASE_URL=postgresql://user:password@localhost:5432/nl2tk
+
+# ============================================
+# Redis 配置
+# ============================================
+REDIS_URL=redis://localhost:6379/0
+
+# ============================================
+# API 密钥配置
+# ============================================
+# 阿里通义千问 API Key (必填，用于剧本生成)
+QWEN_API_KEY=your_qwen_api_key_here
+
+# OpenAI API Key (可选，用于 Sora 视频生成)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Google Gemini API Key (可选，用于 Gemini 视频生成)
+GEMINI_API_KEY=your_gemini_api_key_here
+
+# ============================================
+# 应用配置
+# ============================================
+# 调试模式 (True/False)
+DEBUG=True
+
+# 日志级别 (DEBUG/INFO/WARNING/ERROR)
+LOG_LEVEL=INFO
+
+# ============================================
+# 存储配置
+# ============================================
+# 存储根路径
+STORAGE_PATH=./storage
+
+# 视频存储路径
+VIDEOS_PATH=./storage/videos
+
+# 剧本存储路径
+SCRIPTS_PATH=./storage/scripts
+
+# ============================================
+# 任务调度配置
+# ============================================
+# 调度器时区
+SCHEDULER_TIMEZONE=Asia/Shanghai
+
+# ============================================
+# 热点追踪配置
+# ============================================
+# 热点更新间隔（秒）
+TRENDING_UPDATE_INTERVAL=1800
+
+# ============================================
+# 代理配置（用于 Hugging Face 模型下载）
+# ============================================
+# HTTP 代理（格式：http://proxy_host:port 或 http://user:pass@proxy_host:port）
+# HTTP_PROXY=http://127.0.0.1:7890
+
+# HTTPS 代理（格式：https://proxy_host:port 或 https://user:pass@proxy_host:port）
+# HTTPS_PROXY=http://127.0.0.1:7890
+
+# 注意：如果设置了环境变量 HTTP_PROXY/HTTPS_PROXY，会自动使用，无需在此配置
+
